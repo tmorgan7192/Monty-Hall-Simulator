@@ -1,0 +1,113 @@
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+*/
+body {
+  color: #FFE66D;
+  background-color: #343434;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+h1, h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400;
+  margin: 0px 0px 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+blockquote {
+	font-style: italic;
+	margin: 15px 15px;
+	font-size: 12px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+ul li {
+  display: inline-block;
+  margin: 10px;
+}
+img {
+  height: 168px;
+  width: 88px;
+  border: 3px solid #FFE66D;
+}
+.selected-door{
+	border: 6px solid green;
+}
+table {
+	width: 30%;
+	border-collapse: collapse;
+}
+th, td{
+	text-align: center;
+	color: #A1C6D7;
+	border: 1px solid white;
+	padding: 5px 10px;
+	margin: 0px;
+}
+.column-header{
+	text-decoration: underline;
+	color: #FFE66D;
+}
+.row-header {
+	text-align: right;
+	color: #FFE66D;
+	padding-right: 10px;
+	text-decoration: underline;
+}
+
+button{
+	margin: 5px;
+}
+
+
+
+/* Dropdown button on hover & focus */
+.btn:hover{
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F7FFF7;
+  color: #343434;
+  min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.hide {display:none;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.color-button{
+	background-color: #2980B9;
+}
+
+

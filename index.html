@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="myScript.js"></script>
+  </head>
+  <body>
+    <h1>Monty Hall Simulator</h1>
+	<div id="about" class="dropdown">
+      <button onclick="showInfo('about')" class="btn">About</button>
+	  <div class="dropdown-content">
+		<p>The Monty Hall problem goes something like this:
+	
+		<blockquote>
+	        Suppose you're on a game show, and you're given the choice of three doors: 
+		    Behind one door is a car; behind the others, goats. You pick a door, say No. 1, 
+			and the host, who knows what's behind the doors, opens another door, say No. 3, 
+			which has a goat. He then says to you, "Do you want to pick door No. 2?" 
+			Is it to your advantage to switch your choice?
+		</blockquote> 
+	  
+		Many people are surprised to hear that you are twice as likely to win if you switch doors.  This simulation will let you experience the Monty Hall Problem first hand.
+	</div>
+	
+	<div id="automate" class="dropdown">
+		<button onclick="showInfo('automate')" class="btn">Automate</button>
+		<form id="automation_form" name="automation_form" class="dropdown-content" target="_self" onsubmit="return false">
+			<label for="trials">Number of Trials</label>
+			<input type="text" id="trials" name="trials" value="1"><br>
+			<input type="radio" id="switch" name="switch" value=true checked>
+			<label for="switch">Switch</label>
+			<input type="radio" id="no_switch" name="switch" value=false>
+			<label for="no_switch">Don't Switch</label>
+			<input type="radio" id="random" name="switch" value=false>
+			<label for="random">Random</label><br>
+			<button onclick="customSubmit()">Run Trial(s)</button>
+		</form>
+	</div>
+    </div>
+	<div>
+		<h2 id="message">Select a door.</h2>
+	<div>
+	<div id="yes_no" class="hide" align="center">
+      <button id="yes_btn" class="btn" onclick="getResults(true, false)">yes</button><button id="no_btn" class="btn" onclick="getResults(false, false)">no</button>
+	</div>
+	<div class="hide">
+	  <span id="selected_door">no_door</span><span id="car_door"></span><span id="open_door"></span>
+	</div>
+    </p>
+    <ul>
+	  <li><img id="door_1" class="door" src="images/door_1.gif" alt="goat" width=88 height=168></li>
+	  <li><img id="door_2" class="door" src="images/door_2.gif" alt="goat" width=88 height=168></li>
+	  <li><img id="door_3" class="door" src="images/door_3.gif" alt="goat" width=88 height=168></li>
+    </ul>
+    <div align="center">
+	  <table>
+	    <tr>
+		  <td></td><th class="row-header column-header">Wins</th><th class="column-header">Losses</th><th class="column-header">Total</th><th class="column-header">Percentage Won</th>
+        </tr>
+	    <tr>
+		  <th class="row-header">Switched</th><td id="switch_wins">0</td><td id="switch_losses">0</td><td id="switch_total">0</td><td id="switch_percent">0</td>
+        </tr>
+	    <tr>
+		  <th class="row-header">Did not Switch</th><td id="stay_wins">0</td><td id="stay_losses">0</td><td id="stay_total">0</td><td id="stay_percent">0</td>
+	    </tr>
+	  </table>
+	</div>
+  </body>
+</html>
+
+
+    
